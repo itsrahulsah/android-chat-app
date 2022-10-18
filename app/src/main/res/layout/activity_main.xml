@@ -24,7 +24,8 @@
         android:layout_height="49dp"
         app:layout_constraintBottom_toTopOf="@id/messageBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/reciev_icon" />
+        app:srcCompat="@drawable/reciev_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/sendbtn"
@@ -47,6 +48,8 @@
         android:textColor="@color/white"
         android:textColorHint="@color/design_default_color_on_primary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="text"
+        android:importantForAutofill="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
