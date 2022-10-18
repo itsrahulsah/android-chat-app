@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="8dp"
+    android:background="@color/brown">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recivebtn"
+        tools:listitem="@layout/send_chat_item" />
+
+    <ImageView
+        android:id="@+id/recivebtn"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@id/messageBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/reciev_icon" />
+
+    <ImageView
+        android:id="@+id/sendbtn"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@id/messageBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/send_icon"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/messageBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_box_decrotion"
+        android:hint="@string/message_here"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/design_default_color_on_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
